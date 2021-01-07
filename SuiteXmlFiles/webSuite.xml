@@ -8,13 +8,12 @@
         <classes>
             <class name="TestPackage.TestClass">
             <methods>
-                <include name="test1"/>
-                <include name="test2"/>
+                <include name="test3"/>
             </methods>
         </class>
         </classes>
     </test>
-
+ <!--
  <test name="Firefox test">
         <parameter name="browser" value="Firefox"/>
         <classes>
@@ -25,5 +24,6 @@
             </methods>
         </class>
         </classes>
-    </test>
+    </test>-->
+
 </suite>
