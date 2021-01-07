@@ -6,15 +6,17 @@ import org.testng.annotations.Test;
 
 public class TestClass extends BaseTest {
 
+
     @Test
-    public void test3()
+    public void test1()
     {
-        new Page(driver).getSiteUrl();
+        new Page(driver).ClickBlogButton();
     }
 
-
-
-
-
+    @Test
+    public void test2()
+    {
+        new Page(driver).ClickTestYayinButton();
+    }
 }
 
