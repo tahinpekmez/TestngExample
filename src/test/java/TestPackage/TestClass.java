@@ -1,22 +1,19 @@
 package TestPackage;
 
-import PagePackage.Page;
 import BasePackage.BaseTest;
+import ConfigurationPackage.Configuration;
+import PagePackage.Page;
 import org.testng.annotations.Test;
 
-public class TestClass extends BaseTest {
-
+public class TestClass extends BaseTest
+{
+Page page;
 
     @Test
     public void test1()
     {
-        new Page(driver).ClickBlogButton();
+        page = new Page(driver);
+        page.enterSite();
     }
 
-    @Test
-    public void test2()
-    {
-        new Page(driver).ClickTestYayinButton();
-    }
 }
-

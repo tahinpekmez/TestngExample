@@ -1,5 +1,6 @@
 package BasePackage;
 
+import ConfigurationPackage.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest
 {
+    protected Configuration configuration;
     protected WebDriver driver;
 
     @BeforeTest
@@ -35,7 +37,7 @@ public class BaseTest
 
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize();
-        driver.navigate().to("https://keytorc.com");
+        driver.navigate().to(configuration.getSiteURL());
     }
 
     @AfterTest()

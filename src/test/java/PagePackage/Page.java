@@ -9,21 +9,22 @@ public class Page extends BasePage
     private static final By BLOG_BUTTON = By.xpath("//a[@href='/blog']");
     private static final By TEST_YAYINLARI_BUTTON = By.xpath("//a[@href='/test-yayinlari']");
 
-
-public Page (WebDriver driver)
-    {
+    public Page(WebDriver driver) {
         super(driver);
     }
 
-    public Page ClickBlogButton()
+
+    public void ClickBlogButton()
     {
         clickElement(BLOG_BUTTON);
-        return this;
     }
 
-    public Page ClickTestYayinButton()
+    public void ClickTestYayinButton()
     {
         clickElement(TEST_YAYINLARI_BUTTON);
-        return this;
+    }
+    public void enterSite()
+    {
+        System.out.println(configuration.getSiteURL());
     }
 }

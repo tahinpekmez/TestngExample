@@ -1,23 +1,26 @@
 package BasePackage;
 
+import ConfigurationPackage.Configuration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 
 
-public class BasePage {
+public class BasePage
+{
+    protected Configuration configuration;
     protected WebDriver driver;
 
     public BasePage(WebDriver driver)
     {
         this.driver = driver;
+        this.configuration = Configuration.getInstance();
     }
 
-    public WebElement clickElement(By by)
+    public void clickElement(By by)
     {
         WebElement element = driver.findElement(by);
         element.click();
-        return element;
-
+        configuration.getSiteURL();
     }
 }
