@@ -21,6 +21,10 @@ public class BasePage
     {
         WebElement element = driver.findElement(by);
         element.click();
+
+    }
+
+    public void enterSite(){
         configuration.getSiteURL();
     }
 }

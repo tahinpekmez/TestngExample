@@ -14,6 +14,7 @@ public class Page extends BasePage
     }
 
 
+
     public void ClickBlogButton()
     {
         clickElement(BLOG_BUTTON);

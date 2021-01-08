@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest
 {
-    protected Configuration configuration;
+    protected Configuration configuration = Configuration.getInstance();
     protected WebDriver driver;
 
     @BeforeTest
